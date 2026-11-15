@@ -5,7 +5,7 @@ Skill da **deNoise Studio** que faz a revisão V1 → V2 dos vídeos longos da V
 - lê a mensagem do Daniel (minutagem + título de cartela, "manter", pedidos soltos e `CORTE` + minutagem);
 - põe as **cartelas novas** (.mogrt) por cima das antigas, com o texto certo, a cor certa e o logo do canal;
 - deixa um **marcador** na timeline para tudo o que o editor resolve na mão (delay, som, bip, fade, frames do final…);
-- monta a **sequência vertical de cortes** para Reels/TikTok (~3 min cada, a minutagem do vídeo não muda) com a **marca d'água do @** do canal logo abaixo do queixo;
+- monta a **sequência vertical de cortes** para Reels/TikTok (no mínimo 6: os do Daniel e, se faltar, a skill escolhe outros por gancho; ~3 min cada, a minutagem do vídeo não muda) com a **marca d'água do @** do canal logo abaixo do queixo;
 - confere tudo exportando frames, e não salva o projeto sem você pedir.
 
 | Skill | O que faz |
