@@ -49,8 +49,13 @@ Antes de mexer, mostre uma tabela (minuto real da cartela → pedido → o que v
 ## 3A. Cartelas novas por cima das antigas (sequência "<nome> v02 cartelas")
 
 1. Clone a sequência duas vezes: `_BACKUP_antes_cartelas` e ` v02 cartelas`. Trabalhe na v02 e crie 2 faixas de vídeo no topo.
-2. Para cada cartela, `importMGT` em ordem cronológica, numa faixa vazia, com 5,042 s (a duração do .mogrt). **O fim da cartela nova = o fim do vão da V1.**
-3. Textos: `Texto` (assunto) ou `Nome / Idade / Profissão / Cidade` (nome), trocando `textEditValue` e `fontTextRunLength` no JSON. Quebra de linha com `\r` em 2 linhas equilibradas. `Tamanho do texto` = 45. Na V1, idade e profissão costumam estar como placeholder ("X anos . Profissão"): use `XX years old / Profession` (ou o equivalente em português) e marque.
+2. Para cada cartela, `importMGT` em ordem cronológica, numa faixa vazia. **A cartela nova cobre o Color Matte inteiro** (regra do Juliano, 15/11/2026): começa onde começa o Color Matte da entrada (junto com o Cross Dissolve dele) e termina onde termina o Color Matte da saída, então estique o clipe além dos 5,042 s. O .mogrt tem 1 s de entrada e 1 s de saída protegidos, e só o meio estica. O fade da cartela acompanha os Cross Dissolves do matte: se o dissolve do matte não tiver 1 s, ponha um Cross Dissolve com a mesma duração na própria cartela.
+3. Textos: `Texto` (assunto) ou `Nome / Idade / Profissão / Cidade` (nome), trocando `textEditValue` e `fontTextRunLength` no JSON. `Tamanho do texto` = 50. Modelo de 15/11/2026, depois das alterações do cliente:
+   - **Nome:** digite numa linha só, sem `\r`. O .mogrt deixa numa linha e só quebra em 2, centralizadas, se for longo (mais de 16 letras no Separ e de 11 no Super). Enter no campo força a quebra.
+   - **Idade, Profissão e Cidade:** cada uma sai na sua linha. Idade só com o número ("42") vira "42 anos".
+   - **Cidade:** formato `Cidade . UF`, com ponto em vez de traço. Se vier com " - ", o .mogrt troca sozinho.
+   - **Assunto:** quebre com `\r` em 2 linhas equilibradas. A caixa não quebra sozinha, e o texto diminui para não encostar na arte.
+   - Na V1, idade e profissão costumam estar como placeholder ("X anos . Profissão"): use `XX years old / Profession` (ou o equivalente em português) e marque.
 4. Divorce Stories: `Cor do logo` = `Cor do fundo` (`setColorValue`) e o PNG do logo na faixa de cima, só nas cartelas de assunto: Position 0,229 / 0,115, Scale 15,6, opacidade 0→100 em 1 s e 100→0 no último 1 s, com ease.
 5. **Desative** as cartelas antigas (matte + graphic). Não apague nada e não mexa na música das cartelas.
 6. Marcadores: um por pedido do Daniel que não é cartela, mais um em cada saída de cartela (o vão da V1 mostra ~5 frames de preto; na Camille o Juliano estendeu a V1 por baixo, e isso é com ele).
