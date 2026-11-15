@@ -47,9 +47,9 @@ Antes de mexer, mostre uma tabela (minuto real da cartela → pedido → o que v
 6. Marcadores: um por pedido do Daniel que não é cartela, mais um em cada saída de cartela (o vão da V1 mostra ~5 frames de preto; na Camille o Juliano estendeu a V1 por baixo, e isso é com ele).
 7. Confira exportando 0,5 s de cada cartela e olhando os frames.
 
-## 4. Sequência de cortes (sequência "<nome> Cortes vertical")
+## 4. Sequência de cortes (sequência "<Nome da pessoa>_tiktok")
 
-1. Clone a v02 → 1080×1920, **mantendo o fps da original** (24 serve). Se mudar o fps, o `razor_timeline_at_time` corta em `tempo × fps_novo/fps_velho` (24→30: compense com × 1,25).
+1. Clone a v02 e dê a ela o nome `<Nome da pessoa>_tiktok` (ex.: `Carrie_tiktok`, `Olivia Howell_tiktok`): o export sai com esse nome, no padrão dos arquivos `<nome> tiktoks_N.mp4` do Drive. Depois → 1080×1920, **mantendo o fps da original** (24 serve). Se mudar o fps, o `razor_timeline_at_time` corta em `tempo × fps_novo/fps_velho` (24→30: compense com × 1,25).
 2. **A minutagem não muda**: o vídeo inteiro fica no lugar e desativado, inclusive as cartelas. Nada é removido nem empurrado.
 3. V1 com Scale 177,78 e Position X para centralizar o rosto (detecte com `rostos.swift` nos frames: `X = 0,5 − (rosto_x − 0,5) × 3,16`). O rosto tem que aparecer **inteiro**. Bruto do Meet às vezes vem deitado: confira o frame da **timeline**, não o do arquivo.
 4. **Quantos cortes: no mínimo 6 por vídeo.** Os do Daniel mandam e entram todos, mesmo passando de 6 (vieram 8, ficam 8). Se ele marcou menos de 6 (ou nenhum), complete até 6 escolhendo você mesmo pela transcrição: gancho forte nos primeiros segundos (frase de impacto, pergunta, revelação) e um assunto que se fecha em ~3 min, sem repetir trecho dos cortes dele. No marcador, deixe claro qual corte é do Daniel e qual foi escolhido por você e por quê ("Escolha do Claude: gancho …").

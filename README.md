@@ -59,7 +59,7 @@ Se a pasta da deNoise (`00. Clientes/01. Ongoing/Vivi/00. Assets`) existir no Ma
 
 ## Regras que a skill segue
 
-- V1/A1 são do editor: a skill não corta nem apaga nada na sequência original, trabalha em cópias (`_BACKUP_antes_cartelas`, `v02 cartelas`, `Cortes vertical`).
+- V1/A1 são do editor: a skill não corta nem apaga nada na sequência original, trabalha em cópias (`_BACKUP_antes_cartelas`, `v02 cartelas`, `<Nome>_tiktok`).
 - Cartela antiga é **desativada**, nunca apagada. Nenhum arquivo é apagado.
 - **Não salva o projeto** sem pedido.
 - Não ouve áudio: sempre diz o que precisa ser conferido de ouvido.
