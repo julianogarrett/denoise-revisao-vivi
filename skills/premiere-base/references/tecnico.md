@@ -212,3 +212,5 @@ Impact 01 = 0,34 · 02 = 0,54 · 03 = 0,20 (**banido**, "parece um sino") · 04 
 - Projeto antigo com mídia em `Documents/deNoise/...`: troque os caminhos no XML (gunzip/gzip) para os brutos da leva antes de abrir, e não aparece o Link Media.
 - Cor de `.mogrt` lida por `getValue()`: canais = bytes altos de cada 16 bits (A,R,G,B). Para copiar a cor do fundo para o logo, use `setColorValue(255,r,g,b,true)`.
 - Com vários projetos abertos, `app.projects[i].save()` só grava de fato o projeto **ativo** (o outro volta sem erro e o arquivo não muda). Ative o projeto (`openSequence` de uma sequência dele) antes de `app.project.save()` e confira a data do arquivo.
+- **Mogrts variantes (V1/V2/V3) do mesmo template:** depois de importar, o Premiere pode aplicar a cor de outra variante (provavelmente pelo ID interno igual). Fixe as cores por `setColorValue` com os valores do `definition.json` (`clientControls[].value`, floats 0–1) e confira em frame.
+- `importMGT` reaproveita o item em `Motion Graphics Template Media` quando o nome é igual; se o .mogrt foi atualizado, confira o layout num frame antes de seguir.
