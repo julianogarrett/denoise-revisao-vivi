@@ -36,8 +36,17 @@ Antes de mexer, mostre uma tabela (minuto real da cartela → pedido → o que v
 1. Ache o `.prproj` na pasta do vídeo. Se estiver no Downloads ou com mídia em `Documents/deNoise/...`, mova para `00. Projeto`, troque os caminhos no XML para `01. Brutos` (passo a passo na `premiere-base`) e registre no `99. _Revisar/movimentos.csv`. O original vai para o `99. Temp` da pasta.
 2. `dump_prproj.py` na sequência de edição. Nela, a cartela antiga = Color Matte + Graphic nas faixas V4–V6, e a V1 tem um **vão** embaixo de cada cartela.
 3. Texto das cartelas antigas: frames do render da V1 (`03. Renders`) ou `exportAsMediaDirect` curto. O `InstanceName` do XML às vezes é só o nome da camada.
+4. **O vídeo já tem cartela nova?** Se o dump mostra clipes `Separ_Nome_*`, `Separ_Cartela_*`, `Super_*` (componente "Graphic Parameters"), as cartelas já estão no modelo novo: siga o **3B**. Se mostra Color Matte + Graphic, siga o **3A**.
 
-## 3. Cartelas novas (sequência "<nome> v02 cartelas")
+## 3B. Vídeo que já tem as cartelas novas (só alterações)
+
+1. Clone a sequência: `_BACKUP_antes_alteracoes` e ` v02`. Trabalhe na v02.
+2. Para cada "minuto + título" do Daniel, ache o clipe de cartela mais próximo e troque só o texto (`Texto`, ou `Nome/Idade/Profissão/Cidade`), pelo mesmo JSON do 3A. Não mexa em tempo, cor, logo, tamanho nem música.
+3. "manter" e cartela não citada: não toque.
+4. Pedidos que não são cartela viram marcadores, como no 3A.
+5. Confira em frames só as cartelas alteradas e siga para o passo 4 (cortes).
+
+## 3A. Cartelas novas por cima das antigas (sequência "<nome> v02 cartelas")
 
 1. Clone a sequência duas vezes: `_BACKUP_antes_cartelas` e ` v02 cartelas`. Trabalhe na v02 e crie 2 faixas de vídeo no topo.
 2. Para cada cartela, `importMGT` em ordem cronológica, numa faixa vazia, com 5,042 s (a duração do .mogrt). **O fim da cartela nova = o fim do vão da V1.**
